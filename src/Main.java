@@ -2,16 +2,31 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
+        Lab05.Hee_Haw();
+    }
+    class Lab05{
+        public static void Hee_Haw(){
+            Warrior leonidas  = new Warrior("leonidas",10,10,5,10);
+            Wizard merlin = new Wizard("merlin",10,5,10,8);
+            Rings ring = new Rings("The_Lord_Of_The_Ring",20);
+            Necklaces necklaces = new Necklaces("Necklace_Of_MUSPELHEIM",20);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+            merlin.showstate();
+            merlin.skill_Fireball(leonidas);
+            leonidas.showstate();
+            merlin.skill_Debuff(leonidas);
+            leonidas.showstate();
+            merlin.showstate();
+            leonidas.skill_Buffatk();
+            leonidas.showstate();
+            leonidas.skill_Buffatk();
+            leonidas.showstate();
+            merlin.attack(leonidas);
+            leonidas.showstate();
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            leonidas.equipAccessory(ring);
+            leonidas.attack(merlin);
+            merlin.showstate();
         }
     }
 }
